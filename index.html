@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Dhaka Times</title>
-    
+
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://kit.fontawesome.com/8e8b6aea36.js" crossorigin="anonymous"></script>
@@ -23,12 +24,12 @@
                 <a class="btn btn-ghost normal-case text-xl">Home</a>
               </div>
               <div class="flex-3">
-                <a class="btn btn-ghost normal-case text-xl">Blog</a>
+                <a class="btn btn-ghost normal-case text-xl" hre="http://127.0.0.1:5500/blog.html">Blog</a>
               </div>
             </div>
             <div class="divider"></div>
                          <!-- Menu -->
-                         <ul class="menu menu-horizontal bg-base-100 rounded-box">
+                         <ul class="menu menu-horizontal bg-base-100 rounded-box" id="btn-news">
                             <li><a id="btn-home">Home</a></li>
                             <li><a>Breaking News</a></li>
                             <li><a>Regular news</a></li>
@@ -45,7 +46,19 @@
                             <!-- main -->
       <main id="news-container" class="grow grid grid-cols-1 gap-4" >
 
-      </main>                      
+      </main>       
+      
+                    <!-- modal -->
+                    <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Yay!</label>
+    </div>
+  </div>
+</div>
 
 
     <script src="js/index.js"></script>
