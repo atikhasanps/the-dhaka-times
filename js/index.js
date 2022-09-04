@@ -57,12 +57,7 @@ const showModal =()=>{
     
 }
 
-document.getElementById('btn-news').addEventListener('click', function(){
-    
-  
-        
-   
-})
+
 
 
 loadAllNews();
