@@ -1,3 +1,31 @@
+
+const loadCategories = ()=>{
+   fetch("https://openapi.programming-hero.com/api/news/categories")
+    
+    .then(res=>res.json()) 
+    .then(data=> displayCategories(data.data.news_category))
+    
+}
+
+const displayCategories = categories =>{
+  
+  const categoriesContainer = document.getElementById('categories-container');
+  for(const categorie of categories){
+    console.log(categorie);
+    const categoriList =document.createElement('div');
+    categoriList.classList.add('categorie');
+    categoriList.innerHTML=`
+      <a class="text-orange-700 me-5">${categorie.category_name}</a>
+    `;
+    categoriesContainer.appendChild(categoriList);
+  }
+}
+
+
+  loadCategories();
+
+
+
 const loadAllNews = async()=>{
     const response = await fetch("https://openapi.programming-hero.com/api/news/category/01");
     
