@@ -10,47 +10,73 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://kit.fontawesome.com/8e8b6aea36.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
 </head>
 <body class="w-3/4  mx-auto text-center ">
                         <!-- header -->
-    <header class="pb-4">
+    <header class="pb-4 lg:mx-auto ">
                     <!-- Navbar -->
-        <div class="navbar bg-base-100">
+        <div class="navbar lg:bg-base-100   sm:justify-around">
             <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl">The Dhaka Times</a>
+              <a class="btn btn-ghost normal-case lg:text-xl sm:text-xl logo-title">The Dhaka Times</a>
             </div>
     
             <div class="flex-2">
-                <a class="btn btn-ghost normal-case text-xl">Home</a>
+                <a class="btn btn-ghost normal-case lg:text-xl sm:text-xl">Home</a>
               </div>
               <div class="flex-3">
-                <a class="btn btn-ghost normal-case text-xl" >Blog</a>
+                <a class="btn btn-ghost normal-case lg:text-xl" href="blog.html">Blog</a>
               </div>
             </div>
             <div class="divider"></div>
                          <!-- Menu -->
-                         <div>
-                          <ul class="nav justify-content-center mx-auto " id="categories-container">
+                         <div class="categories-container xs:grid xs:grid-cols-2">
+                          <ul class="nav justify-content-center mx-auto    lg:shadow p-3 mb-5 bg-white rounded text-center  " id="categories-container">
                             
+                             
+                          
+                      
                           </ul>     
-                         </div>     
+                         </divc>     
     </header>
 
+    <section  class="pb-5">
+      <div class="input-group">
+        <span class="input-group-text">News Found</span>
+        <input id="input-field" type="text" aria-label="First name" class="form-control">
+        
+      </div>
+    </section>
 
                             <!-- main -->
       <main id="news-container" class="grow grid grid-cols-1 gap-4" >
 
       </main>       
       
-                    <!-- modal -->
-                    <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+         <section id="loader" class="d-none">
+
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+         </section>           
+
+
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
 <div class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box"id= "modal-body">
+  <div class="modal-box" id="details-body">
+    <!-- <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p> -->
     
-      <label for="my-modal-6" class="btn">Yay!</label>
-    </div>
+  </div>
+  <div class="modal-action">
+    <label for="my-modal-6" class="btn">Close</label>
   </div>
 </div>
+
+
 
 
     <script src="js/index.js"></script>
